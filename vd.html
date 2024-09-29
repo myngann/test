@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông Tin Liên Hệ Nhóm</title>
+    <style>
+      .container {
+        width: 480px;
+        margin: auto;
+        border: 2px solid darkcyan;
+        padding: 20px;
+        font-size: 22px;
+      }
+      h2 {
+        color: red;
+        text-align: center;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        box-sizing: border-box;
+      }
+      .btn {
+        width: 150px;
+        padding: 10px;
+        background-color: darkorange;
+        border: none;
+        font-weight: bold;
+        color: black;
+        cursor: pointer;
+      }
+      /*.btn.cancel {
+        background-color: gray;
+      }*/
+      .btn-container {
+        display: flex;
+        justify-content:space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>THÔNG TIN LIÊN HỆ NHÓM</h2>
+      <form action="GroupInfo.php" method="post">
+        <label for="tenNhom">Tên nhóm</label>
+        <input
+          type="text"
+          id="tenNhom"
+          name="tenNhom"
+          placeholder="Nhập tên của nhóm bạn"
+        />
+
+        <label for="nhomTruong">Nhóm trưởng</label>
+        <input
+          type="text"
+          id="nhomTruong"
+          name="nhomTruong"
+          placeholder="Nhập họ tên của người nhóm trưởng"
+        />
+
+        <fieldset style="width: 450px; margin-bottom: 20px">
+          <legend>
+            <label for="website"
+              ><b>Trang web giới thiệu đồ án của nhóm</b></label
+            >
+          </legend>
+
+          <label for="nenTang">Nền tảng</label>
+          <select id="nenTang" name="nenTang">
+            <option value="Wordpress">Wordpress</option>
+            <option value="Google">Google</option>
+            <option value="Wix">Wix</option>
+            <option value="Github">Github</option>
+            <option value="Khac">Khác</option>
+          </select>
+
+          <label for="diaChi">Địa chỉ</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            placeholder="Nhập địa chỉ trang web nhóm"
+          />
+        </fieldset>
+
+        <label for="yKien">Ý kiến khác của nhóm</label>
+        <textarea
+          id="yKien"
+          name="yKien"
+          rows="4"
+          placeholder="Nhập ý kiến của nhóm"
+        ></textarea>
+
+        <div class="btn-container">
+          <button type="submit" class="btn">Submit</button>
+          <button type="button" class="btn cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
